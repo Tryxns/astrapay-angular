@@ -18,6 +18,11 @@ npm start
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Screenshots
+- View with empty note
+  ![Screenshot 2025-03-17 at 08-47-53 AstrapayAngular2](https://github.com/user-attachments/assets/b9438f6a-1c0c-4641-bccd-af9e2af9d09d)
+
+- View with 6 notes
+  ![Screenshot 2025-03-17 at 08-45-11 AstrapayAngular2](https://github.com/user-attachments/assets/e33ada09-d4ee-42d8-af15-6faad78b1489)
 
 
 ## Additional Resources
