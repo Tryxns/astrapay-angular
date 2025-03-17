@@ -14,16 +14,11 @@ import $ from 'jquery';
 export class AppComponent {
   title = 'astrapay-angular-2';
   constructor (private notesService: NotesService){};
-  // notes: Note[] | undefined;
-  // noteCreateForm: FormGroup | undefined;
-  // currTitle: string | undefined;
-  // currContent: string | undefined;
   notes: any | null;
   newNote = { title: '', content: '' };
   errorMessage: string | undefined;
   
   onSubmit(event: any) {
-    // console.log(event.target[0].value);
     if (event.target[1].value) {
       this.newNote.title = event.target[0].value;
       this.newNote.content = event.target[1].value;
@@ -59,7 +54,6 @@ export class AppComponent {
   viewNote(sequence_id: number){
     this.notesService.getnoteById(sequence_id).subscribe(
       (response) => {
-        // this.loadNotes();
         console.log('Note created successfully:', response);
         $('#noteViewModalHeader').text(response.title);
         $('#noteViewModalContent').text(response.content);
@@ -71,15 +65,9 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    // this.noteCreateForm = new FormGroup({
-    //   title: new FormControl(''),
-    //   content: new FormControl(''),
-    // });
-
-    // this.notes = [new Note("Title 1", "this is one"), new Note("Title 2", "this is two")];
-    this.loadNotes();
-    
+    this.loadNotes();    
   }
+
   loadNotes(): void {
     this.notesService.getNotes().subscribe(
       (data) => {
@@ -94,13 +82,3 @@ export class AppComponent {
     );
   }
 }
-
-// export class Note {
-//   title: string;
-//   content: string;
-
-//   constructor(title: string, content: string){
-//     this.title = title;
-//     this.content = content;
-//   };
-// }
