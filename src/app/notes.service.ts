@@ -40,9 +40,10 @@ export class NotesService {
   createNote(note: any): Observable<any> {
     return this.http.post(`${this.noteAppUrl}`, note);
   }
+
   // Update a note
-  // updatenote(id: number, note: any): Observable<any> {
-  //   return this.http.put(`${this.baseUrl}/notes/${id}`, note);
+  // updatenote(sequence_id: number, note: any): Observable<any> {
+  //   return this.http.put(`${this.noteAppUrl}/${sequence_id}`, note);
   // }
 
   // Delete a note
