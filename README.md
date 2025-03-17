@@ -4,8 +4,17 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Setup Development server
 This project is meant to be paired with [astrapay-spring-boot-external](https://github.com/Tryxns/astrapay-spring-boot-external) so please kindly setup the back-end local server in the first place.
+1. Clone this repo
+```bash
+git clone git@github.com:Tryxns/astrapay-angular.git
+```
 
-To start a local development server for the front-end, run:
+2. At the project folder directory level,  install the required dependencies
+```bash
+npm install
+```
+
+3. To start a local development server for the front-end, run:
 
 ```bash
 ng serve
